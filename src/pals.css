@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.App {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #86b9c2;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px 5px rgb(15, 36, 39);
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  h2 {
+    align-self: center;
+    padding-bottom: 10px;
+  }
+  
+  .puppy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .puppy-grid p {
+    background-color: #667f80;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .puppy-grid p:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+    color: black;
+  }
+
+  .selectedPuppy {
+    padding: 10px;
+   margin: 20px 0 0;
+   border-radius: 10px;
+    background-color: #667f80;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    color: #ffffff;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
